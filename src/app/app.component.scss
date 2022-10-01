@@ -1,0 +1,35 @@
+.layout-topbar {
+    background: linear-gradient(rgb(77, 0, 128), rgb(111, 0, 255));
+    padding: 1rem;
+    width: 103rem;
+    border-color: rgb(99, 0, 99);
+    border-style: inset; 
+
+
+    .topbar-marota { }
+
+    .listPres {
+        font-size: 2rem;
+        margin-left: 1rem;
+        font-family: Fantasy;
+        color: white;;
+
+    }
+
+    .edit {
+        margin-left: 75rem;
+        margin-bottom: 5px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: orchid;
+
+    }
+
+    .cadastro {
+        margin-left: 2rem;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: orchid;
+
+    }
+}
