@@ -1,12 +1,9 @@
 .layout-topbar {
     background: linear-gradient(rgb(77, 0, 128), rgb(111, 0, 255));
     padding: 1rem;
-    width: 103rem;
+    width: auto;
     border-color: rgb(99, 0, 99);
     border-style: inset; 
-
-
-    .topbar-marota { }
 
     .listPres {
         font-size: 2rem;
@@ -17,7 +14,7 @@
     }
 
     .edit {
-        margin-left: 75rem;
+        margin-left: 55rem;
         margin-bottom: 5px;
         padding: 10px;
         border-radius: 10px;

@@ -1,0 +1,25 @@
+.parent {
+    display: grid;
+    place-items: center;
+  }
+
+.parent ::placeholder {
+    color: rgb(182, 182, 182);
+}
+
+.cadastrar {
+ // margin-left: 2rem;
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: orchid;
+
+}
+
+.voltar {
+    margin-left: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: orchid;
+
+}

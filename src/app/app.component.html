@@ -1,8 +1,11 @@
 <div class="layout-topbar">
-    <a class="listPres">Lista de Presença</a>
-    
-    <button class="edit">Editar</button>
-    <button [routerLink]="['/home']" class="cadastro">cadastrar</button>
+    <a class="listPres" [routerLink]="['']">Lista de Presença</a>
+
+    <button [routerLink]="['/editar']" class="edit"><strong>Editar</strong></button>
+    <button [routerLink]="['/cadastro']" class="cadastro"><strong>Cadastrar</strong></button>
 </div>
+
+<p>Usuarios Cadastrados:</p>
+    
 
 <router-outlet></router-outlet>
