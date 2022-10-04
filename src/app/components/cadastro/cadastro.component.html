@@ -1,15 +1,16 @@
-<form id="some-form">
+<form [formGroup]="form" (ngSubmit)="onClick()">
 
     <div class="parent" style="margin-top: 2rem; font-weight: bold; color: white;">Novo Cadastro</div>
 
     <div class="parent">
-        <input placeholder="Digite seu nome..." required type="text" style="width: 50rem; height: 3rem; 
-        border-radius: 15px; background-color: gray; 
+        <input name="cadastro"  type="text" placeholder="Digite seu nome..." formControlName="cadastro" 
+        style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
         margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
     </div>
 
     <div style="text-align : center;">
-        <input type="submit" value="submit" class="cadastrar" style="font-weight: bold;">
+        <button type="submit" value="Enviar" class="cadastrar" 
+        style="font-weight: bold;" [disabled]="form.invalid">Enviar</button>
         <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
     </div>
 

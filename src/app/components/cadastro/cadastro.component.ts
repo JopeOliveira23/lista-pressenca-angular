@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,16 +9,23 @@ import { FormGroup } from '@angular/forms';
 export class CadastroComponent implements OnInit {
 
   cadastro!: FormGroup;
+  teste: string = '';
+  form!: FormGroup;
 
-
-  constructor() { }
+  constructor(
+    public fb: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      cadastro: [ null, Validators.required ]
+    })
   }
 
-  const form = document.querySelector("#some-form") as HTMLAnchorElement;
-  form.addEventListener('click', () => {
-      console.log('oi'),
-    );
+ 
+  onClick(): void {
+    console.log(this.form.value.cadastro)
+  }
   
+
 }

@@ -9,10 +9,15 @@
 
 .cadastrar {
  // margin-left: 2rem;
+    cursor: pointer;
     margin-top: 1rem;
     padding: 10px;
     border-radius: 10px;
     background-color: orchid;
+
+    &:disabled {
+        cursor: auto;
+    }
 
 }
 
