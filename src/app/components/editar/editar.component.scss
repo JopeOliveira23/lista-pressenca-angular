@@ -1,4 +1,12 @@
-.cadastrados{
+.card {
+    background-color: gray;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    place-items: center;
+}
+
+.cadastrados {
     margin-right: 4rem;
     padding: 10px;
     border-radius: 10px;
@@ -10,7 +18,7 @@
        margin-top: 1rem;
        padding: 10px;
        border-radius: 10px;
-       background-color: orchid;
+       background-color: rgb(255, 0, 140);
    
 }
 
@@ -19,6 +27,6 @@
     margin-right: 4rem;
     padding: 10px;
     border-radius: 10px;
-    background-color: orchid;
+    background-color: rgb(255, 0, 140);
 
 }

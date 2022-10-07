@@ -1,7 +1,7 @@
 .parent {
     display: grid;
     place-items: center;
-  }
+}
 
 .parent ::placeholder {
     color: rgb(182, 182, 182);
@@ -13,7 +13,7 @@
     margin-top: 1rem;
     padding: 10px;
     border-radius: 10px;
-    background-color: orchid;
+    background-color: rgb(255, 0, 140);
 
     &:disabled {
         cursor: auto;
@@ -25,6 +25,115 @@
     margin-left: 2rem;
     padding: 10px;
     border-radius: 10px;
-    background-color: orchid;
+    background-color: rgb(255, 0, 140);
+
+}
+
+.bg-modal {
+    height: 50px;
+    width: 300px;
+    background-color: gray;
+    border-radius: 25px;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    top: 270px;
+    display: none;
+
+        animation: fadeIn 0.5s;
+        -webkit-animation: fadeIn 0.5s;
+        -moz-animation: fadeIn 0.5s;
+        -o-animation: fadeIn 0.5s;
+        -ms-animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  .fade-out {
+    animation: fadeOut ease 1s;
+    -webkit-animation: fadeOut ease 1s;
+    -moz-animation: fadeOut ease 1s;
+    -o-animation: fadeOut ease 1s;
+    -ms-animation: fadeOut ease 1s;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+  }
+}
+
+
+
+.close {
+    position: absolute;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    color: rgb(255, 0, 140);
+    cursor: pointer;
 
 }
