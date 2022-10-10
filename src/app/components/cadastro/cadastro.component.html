@@ -1,4 +1,4 @@
-<form [formGroup]="form" (ngSubmit)="onClick('enviar')">
+<form [formGroup]="form">
 
     <div class="parent" style="margin-top: 2rem; font-weight: bold; color: white;">Novo Cadastro</div>
 
@@ -9,20 +9,71 @@
     </div>
 
     <div style="text-align : center;">
-        <button type="submit" value="Enviar" class="cadastrar" id="enviar"
-        style="font-weight: bold;" [disabled]="form.invalid">Enviar</button>
+
+        <button class="cadastrar">Enviar</button>
+
         <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
     </div>
 
+    <div class="alert show">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Usuario cadastrado com sucesso!</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+    </div>
+
+    <script>
+        $('button').click(function(){
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('show');
+            $('.alert').addClass('showAlert');
+            setTimeout(function(){
+                $('.alert').addClass('hide');
+                $('.alert').removeClass('show');
+            }, 3000);
+        });
+
+        $('close-btn').click(function(){
+            $('.alert').addClass('hide');
+            $('.alert').removeClass('show');
+        });
+    </script>
+
 </form>
 
-<div style="text-align: -webkit-center;">
-    <div class="bg-modal">
-        <div class="modal-content">
-            <p style="color: white; font-weight: bold;">Usuario cadastrado com sucesso!</p>
-        </div>
-        <a class="close" (click)="onClick('close')">+</a>
-    </div>
-</div>
-
 <!-- <span class="popuptext" id="myPopup">Popup text...</span> -->
+
+<!--
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="https://kit.fontawsome.com/a076d05399.js"></script>
+</head>
+<body>
+    <button>Show Alert</button>
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Usuario cadastrado com sucesso!</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+    </div>
+
+    <script>
+        $('button').click(function(){
+            $('.alert').removeClass('hide');
+            $('.alert').addClass('show');
+            $('.alert').addClass('showAlert');
+            setTimeout(function(){
+                $('.alert').addClass('hide');
+                $('.alert').removeClass('show');
+            }, 3000);
+        });
+
+        $('close-btn').click(function(){
+            $('.alert').addClass('hide');
+            $('.alert').removeClass('show');
+        });
+    </script>
+
+</body> -->
