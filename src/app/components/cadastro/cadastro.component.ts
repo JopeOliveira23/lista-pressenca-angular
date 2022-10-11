@@ -20,11 +20,12 @@ export class CadastroComponent implements OnInit {
     this.form = this.fb.group({
       cadastro: [ null, Validators.required ]
     })
+  
   }
 
  
-  onClick(teste: string) {
+  onClick(event: string) {
 
-    
+    console.log ();
   }
 }
