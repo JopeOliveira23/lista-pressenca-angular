@@ -3,76 +3,24 @@
     <div class="parent" style="margin-top: 2rem; font-weight: bold; color: white;">Novo Cadastro</div>
 
     <div class="parent">
-        <input name="cadastro"  type="text" placeholder="Digite seu nome..." formControlName="cadastro" 
+        <input name="cadastro" type="text" autocomplete="off" placeholder="Digite seu nome..." formControlName="cadastro" 
         style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
         margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
     </div>
 
     <div style="text-align : center;">
 
-        <button class="cadastrar" [disabled]="form.invalid">Enviar</button>
+        <button type="submit" class="cadastrar"
+        style="font-weight: bold;" [disabled]="form.invalid">Enviar</button>
 
         <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
     </div>
 
-    <div class="parent alert show">
+    <div class="parent alert hide">
         <span class="msg">Usuario cadastrado com sucesso!</span>
         <button class="close-btn" (click)="onClick('close')">
             <span class="fas fa-times"></span>
         </button>
     </div>
 
-    <script>
-        $('button').click(function(){
-            $('.alert').removeClass('hide');
-            $('.alert').addClass('show');
-            $('.alert').addClass('showAlert');
-            setTimeout(function(){
-                $('.alert').addClass('hide');
-                $('.alert').removeClass('show');
-            }, 3000);
-        });
-
-        $('close-btn').click(function(){
-            $('.alert').addClass('hide');
-            $('.alert').removeClass('show');
-        });
-    </script>
-
 </form>
-
-<!-- <span class="popuptext" id="myPopup">Popup text...</span> -->
-
-<!--
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="https://kit.fontawsome.com/a076d05399.js"></script>
-</head>
-<body>
-    <button>Show Alert</button>
-    <div class="alert hide">
-        <span class="fas fa-exclamation-circle"></span>
-        <span class="msg">Usuario cadastrado com sucesso!</span>
-        <span class="close-btn">
-            <span class="fas fa-times"></span>
-        </span>
-    </div>
-
-    <script>
-        $('button').click(function(){
-            $('.alert').removeClass('hide');
-            $('.alert').addClass('show');
-            $('.alert').addClass('showAlert');
-            setTimeout(function(){
-                $('.alert').addClass('hide');
-                $('.alert').removeClass('show');
-            }, 3000);
-        });
-
-        $('close-btn').click(function(){
-            $('.alert').addClass('hide');
-            $('.alert').removeClass('show');
-        });
-    </script>
-
-</body> -->

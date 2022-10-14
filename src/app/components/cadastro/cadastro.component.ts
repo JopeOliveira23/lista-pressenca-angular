@@ -24,8 +24,28 @@ export class CadastroComponent implements OnInit {
   }
 
  
-  onClick(event: string) {
+  onClick(click: string) {
+    let selector: any = document.querySelector('.alert')
 
-    console.log ();
+      if (click === 'enviar'){
+        console.log (this.form.value);
+        selector.classList.remove('hide');
+        selector.classList.add('show');
+        selector.classList.add('showAlert');
+          setTimeout(() => {
+            selector.classList.add('hide');
+            selector.classList.removeClass('show');
+            selector.classList.removeClass('showAlert');
+          }, 3000);
+      } 
+      else {
+        selector.classList.add('hide');
+        selector.classList.removeClass('show');
+        selector.classList.removeClass('showAlert');
+      }
+
   }
+
+
+  
 }
