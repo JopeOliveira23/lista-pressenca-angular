@@ -1,16 +1,24 @@
-<div style="text-align : end;">
+<div class="parent">
 
-    <select class="cadastrados">
+    <select class="cadastrados" style="margin-top: 2rem; text-align: center;">
         <option selected disabled value="">Cadastrados</option>
 
         <option>Caio</option>
         <option>Rafa</option>
         <option>Igor</option>
         <option>João</option>
-    </select>   
-
-    <input type="submit" value="Salvar" class="editar" style="font-weight: bold;">
-
-    <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button><br>
+    </select>
     
+    <input name="cadastro" type="text" autocomplete="off" placeholder="Digite seu nome..." formControlName="cadastro" 
+    style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
+    margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
+
+    <div style="margin-top: 2rem;">
+
+        <input type="submit" value="Salvar" class="editar" style="font-weight: bold;">
+
+        <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
+        
+    </div>
+
 </div>

@@ -9,7 +9,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CadastroComponent implements OnInit {
 
   cadastro!: FormGroup;
-  teste: string = '';
   form!: FormGroup;
 
   constructor(
@@ -45,7 +44,5 @@ export class CadastroComponent implements OnInit {
       }
 
   }
-
-
   
 }
