@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CadastroComponent } from '../cadastro/cadastro.component';
 
 @Component({
   selector: 'app-editar',

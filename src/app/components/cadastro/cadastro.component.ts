@@ -24,6 +24,7 @@ export class CadastroComponent implements OnInit {
 
  
   onClick(click: string) {
+    
     let selector: any = document.querySelector('.alert')
 
       if (click === 'enviar'){
@@ -42,7 +43,6 @@ export class CadastroComponent implements OnInit {
         selector.classList.removeClass('show');
         selector.classList.removeClass('showAlert');
       }
-
   }
-  
+
 }

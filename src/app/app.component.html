@@ -1,14 +1,14 @@
-<div class="layout-topbar">
 
+<div class="layout-topbar">
     <a class="button fas fa-bars" (click)="onClick('open')"></a>
     <a class="listPres" [routerLink]="['']">Lista de Presença</a>
 </div>
 
 <div id="mySidenav" class="sidenav">
-    <a class="closebtn" (click)="onClick('close')">&times;</a>
-    <a href="#" (click)="onClick('close')">Home</a>
-    <a [routerLink]="['/cadastro']" (click)="onClick('close')">Cadastrar</a>
-    <a [routerLink]="['/editar']" (click)="onClick('close')">Editar</a>
+    <a class="closebtn" (click)="onClick('')">&times;</a>
+    <a [routerLink]="['']" (click)="onClick('')">Home</a>
+    <a [routerLink]="['/cadastro']" (click)="onClick('')">Cadastrar</a>
+    <a [routerLink]="['/editar']" (click)="onClick('')">Editar</a>
 </div>
 
 <router-outlet></router-outlet>

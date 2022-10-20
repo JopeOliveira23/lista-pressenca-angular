@@ -7,14 +7,21 @@
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 
 }
 
-.editar {
+::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.salvar {
        margin-right: 10px;
        padding: 10px;
        border-radius: 10px;
        background-color: rgb(255, 0, 140);
+       cursor: pointer;
    
 }
 
@@ -23,5 +30,6 @@
     padding: 10px;
     border-radius: 10px;
     background-color: rgb(255, 0, 140);
+    cursor: pointer;
 
 }

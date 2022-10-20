@@ -9,13 +9,14 @@
         <option>João</option>
     </select>
     
-    <input name="cadastro" type="text" autocomplete="off" placeholder="Digite seu nome..." formControlName="cadastro" 
+    <input name="cadastro" type="text" autocomplete="off" [disabled]="true"
+    placeholder="Digite seu nome..." formControlName="cadastro" 
     style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
     margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
 
     <div style="margin-top: 2rem;">
 
-        <input type="submit" value="Salvar" class="editar" style="font-weight: bold;">
+        <input type="submit" value="Salvar" class="salvar" style="font-weight: bold;">
 
         <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
         

@@ -3,11 +3,12 @@
   place-items: center;
 }
 
-.parent ::placeholder {
-  color: rgb(182, 182, 182);
+::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1;
 }
 
-.cadastrar {
+.enviar {
   cursor: pointer;
   margin-top: 1rem;
   padding: 10px;
@@ -26,6 +27,7 @@
   padding: 10px;
   border-radius: 10px;
   background-color: rgb(255, 0, 140);
+  cursor: pointer;
 
 }
 

@@ -17,21 +17,27 @@ export class AppComponent {
 
   onClick(click: string) {
     let sideBar: any = document.getElementsByClassName("sidenav")[0]
+    let body: any = document.body
 
-    if (click === 'open'){
+      if (click === 'open'){
+      body.classList.add('pelicula');
       sideBar.style.width = "250px";
+      
+      //body.style.background = "red";
 
-      //document.body.style.background = "rgba(0,0,0,0.4)";
-      //document.body.style.opacity = "0.5";
-    }
-
-    else {
-      sideBar.style.width = "0";
-
-      //document.body.style.background = "rgb(22, 22, 22)";
-      //document.body.style.opacity = "1";
-    }
+      }
+      else if (click === ''){
+        body.classList.remove('pelicula');
+        sideBar.style.width = "0";
+      }
 
   }
 
+  onClose(close: string) {
+    let pelicula = document.getElementById("pelicula");
+
+    pelicula!.onclick = function() {
+      pelicula?.classList.toggle("active");}
+
+  }
 }
