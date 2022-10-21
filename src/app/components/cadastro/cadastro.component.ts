@@ -44,5 +44,4 @@ export class CadastroComponent implements OnInit {
         selector.classList.removeClass('showAlert');
       }
   }
-
 }

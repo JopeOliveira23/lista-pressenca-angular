@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CadastroComponent } from '../cadastro/cadastro.component';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-editar',
@@ -8,9 +8,32 @@ import { CadastroComponent } from '../cadastro/cadastro.component';
 })
 export class EditarComponent implements OnInit {
 
-  constructor() { }
+  items: Array<any> = [];
+  cadastro!: FormGroup;
+  form!: FormGroup;
+
+  constructor(
+    public fb: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
-  }
 
+    this.form = this.fb.group({
+      cadastro: [ null, Validators.required ]
+    })
+
+    let names: any = document.getElementById('name');
+    names! = this.items;
+    console.log (this.form.value);
+
+    this.items = [
+      
+      {name:'Caio'},
+      {name:'Rafael'},
+      {name:'Igor'},
+      {name:'João'} 
+    
+    ];
+
+  }
 }

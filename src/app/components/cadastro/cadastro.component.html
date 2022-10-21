@@ -3,7 +3,8 @@
     <div class="parent" style="margin-top: 2rem; font-weight: bold; color: white;">Novo Cadastro</div>
 
     <div class="parent">
-        <input name="cadastro" type="text" autocomplete="off" placeholder="Digite seu nome..." formControlName="cadastro" 
+        <input name="cadastro" type="text" autocomplete="off"
+        placeholder="Digite seu nome..." formControlName="cadastro" 
         style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
         margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
     </div>
@@ -14,6 +15,7 @@
         style="font-weight: bold;" [disabled]="form.invalid">Enviar</button>
 
         <button [routerLink]="['']" class="voltar"><strong>Voltar</strong></button>
+        
     </div>
 
     <div class="parent alert hide">
