@@ -1,9 +1,9 @@
-<form [formGroup]="form" (ngSubmit)="onClick('enviar')">
+<form [formGroup]="form" (ngSubmit)="onClick('enviar', form)">
 
     <div class="parent" style="margin-top: 2rem; font-weight: bold; color: white;">Novo Cadastro</div>
 
     <div class="parent">
-        <input name="cadastro" type="text" autocomplete="off"
+        <input  name="cadastro" type="text" autocomplete="off"
         placeholder="Digite seu nome..." formControlName="cadastro" 
         style="width: 50rem; height: 3rem; border-radius: 15px; background-color: gray; 
         margin-top: 2rem; text-align: center; font-weight: bold; color: white;">
@@ -20,7 +20,7 @@
 
     <div class="parent alert hide">
         <span class="msg">Usuario cadastrado com sucesso!</span>
-        <button class="close-btn" (click)="onClick('close')">
+        <button class="close-btn" (click)="onClick('','')">
             <span class="fas fa-times"></span>
         </button>
     </div>

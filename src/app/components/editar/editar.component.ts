@@ -11,12 +11,15 @@ export class EditarComponent implements OnInit {
   items: Array<any> = [];
   cadastro!: FormGroup;
   form!: FormGroup;
+  inputCadastro: any;
 
   constructor(
-    public fb: FormBuilder,
+    public fb: FormBuilder, 
   ) { }
 
   ngOnInit(): void {
+
+    console.log(this.inputCadastro)
 
     this.form = this.fb.group({
       cadastro: [ null, Validators.required ]
@@ -24,7 +27,7 @@ export class EditarComponent implements OnInit {
 
     let names: any = document.getElementById('name');
     names! = this.items;
-    console.log (this.form.value);
+    //console.log (this.form.value);
 
     this.items = [
       
