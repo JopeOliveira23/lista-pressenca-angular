@@ -9,8 +9,8 @@ import { EditarComponent } from '../editar/editar.component';
 })
 export class CadastroComponent implements OnInit {
 
-  form!: FormGroup;
-  name: any;
+  form    !: FormGroup;
+  name     : any;
 
   constructor(
     private editar: EditarComponent,

@@ -8,10 +8,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class EditarComponent implements OnInit {
 
-  items: Array<any> = [];
-  cadastro!: FormGroup;
-  form!: FormGroup;
-  inputCadastro: any;
+  items            : Array<any> = [];
+  cadastro        !: FormGroup;
+  form            !: FormGroup;
+  inputCadastro   !: string;
 
   constructor(
     public fb: FormBuilder, 
@@ -19,16 +19,15 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.inputCadastro)
-
+    console.log(this.inputCadastro);
+    //console.log (this.form.value);
     this.form = this.fb.group({
       cadastro: [ null, Validators.required ]
     })
 
     let names: any = document.getElementById('name');
     names! = this.items;
-    //console.log (this.form.value);
-
+    
     this.items = [
       
       {name:'Caio'},
